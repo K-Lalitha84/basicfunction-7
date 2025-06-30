@@ -142,7 +142,7 @@ Enter b:5
 Addition : 15
 subtract: 5
 
-code9::
+code9:: nested fun with fact() and power()
 ''''write a program to calculate the factorial and power of given numbers by creating the nested loops with in loop
 where a=5 & b=3
  calculate the factorial for a 
@@ -168,3 +168,41 @@ b=int(input("Enter b:"))
 operation(a,b)
 
 code10::
+factorial func()
+
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n*fact(n-1)
+    
+num=int(input("Enter the number:"))
+print("Factorial",fact(num))
+output::
+Enter the number:4
+Factorial 24
+
+
+code11:::
+
+#Recursive functions()
+''' fact=4!=4*3*2*1=24
+super factorial= 4!=4!*3!*2!*1!=24*6*2*1=288
+'''
+
+
+def fact(n):
+    if n==0 or n==1:
+        return 1
+    return n*fact(n-1)
+def sfact(n):
+    if n==1:
+        return 1
+    return fact(n) *sfact(n-1)
+    
+num=int(input("Enter the number:"))
+print("Factorial",sfact(num))
+
+output()::
+Enter the number:4
+Factorial 288.
