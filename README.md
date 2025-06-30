@@ -74,4 +74,97 @@ Subtract: 5
 Product: 50
 
 code6::
+#anonumus function lambda
+#lambda var: operation
 
+num=int(input("Enter a number:"))
+square=lambda num:num*num
+print(square(num))
+
+output:::
+Enter a number:3
+9
+
+
+or  addition
+#anonumus function lambda
+#lambda var: operation
+
+num1=int(input("Enter anumber1:"))
+num2=int(input("Enter a number2:"))
+square=lambda num1,num2:num1+num2
+print(square(num1,num2))
+output::
+Enter anumber1:20
+Enter a number2:30
+50
+
+
+code7::
+
+### NESTED FUNCTION()
+
+## nested functions()
+
+def hi():
+    def hello():
+        print("inner function")
+    print("outer function")
+    hello()
+print("nested function")
+hi()
+
+OUTPUT()::
+nested function
+outer function
+inner function
+
+
+code8::
+## nested functions() with operation()
+
+
+def operation(a,b):
+    def add():
+        return a+b
+    def sub():
+        return a-b
+    print("Addition :",add())
+    print("subtract:",sub())
+
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+operation(a,b)
+
+output::
+Enter a:10
+Enter b:5
+Addition : 15
+subtract: 5
+
+code9::
+''''write a program to calculate the factorial and power of given numbers by creating the nested loops with in loop
+where a=5 & b=3
+ calculate the factorial for a 
+caulate powere for 5**3 
+output::
+factorial=120
+power=125
+'''
+
+code::
+def operation(a,b):
+    def power(a,b):
+        return a**b
+    def fact(a):
+        op=1
+        for i in range(1,a+1):
+            op *=i
+        return op
+    print("Power:",power(a,b))
+    print("Factorial:",fact(a))
+a=int(input("Enter a:"))
+b=int(input("Enter b:"))
+operation(a,b)
+
+code10::
